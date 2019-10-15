@@ -9,11 +9,11 @@
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: repeat 2, 1fr;
-      grid-template-columns: repeat 2, 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "box1 box2" "box3 box3";
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "box1 box2 box5" "box3 box2 box5" "box4 box4 box4";
 }
 
 * main .box1 {
@@ -21,13 +21,12 @@
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: box1;
-  -ms-grid-column-align: center;
-      justify-self: center;
 }
 
 * main .box2 {
   background: lightskyblue;
   -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: box2;
 }
@@ -36,7 +35,22 @@
   background: lightgreen;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: box3;
+}
+
+* main .box4 {
+  background: lightgrey;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: box4;
+}
+
+* main .box5 {
+  background: khaki;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: box5;
 }
 /*# sourceMappingURL=style.css.map */
